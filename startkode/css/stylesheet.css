@@ -7,6 +7,9 @@
     --basic-red: #6a0404;      /* Mørk rød, kan brukes for viktige knapper/markeringer */
 }
 
+*{
+  box-sizing: border-box;
+}
 
 /* 
   GLOBALT: Setter en lesbar standardfont for hele dokumentet.
@@ -68,12 +71,48 @@ a{
 
 /* HERO-section */
 .deal-section{
+    /*background-image:url("https://picsum.photos/800/500?grayscale");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;  */
     background-color:var(--basic-grey); /* HVA: Setter lys bakgrunn for å fremheve seksjonen */
     padding: 1rem;                     /* HVA: Gir luft rundt innholdet */
+    position:relative;
+    height: 50vh;
+    min-height: 200px;
+/*
+    img{
+        width: 100%;
+      
+    }
+
+    h2, p, a{
+        position: absolute;
+
+    }
+
+    p{
+      top: 63;
+    }
+
+    a{
+      top: 160;
+
+    }
 }
 
 
 /* ========== HOVEDINNHOLD ========== */
+
+main{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+main > *{
+    maring: 0 auto;
+}
 
 /*
   article: Kort/innholdsboks-oppsett.
@@ -112,4 +151,20 @@ article{
     color: #fff;                /* HVA: Høy kontrast for tilgjengelighet/lesbarhet. */
     padding: 1rem;              /* HVA: Stor klikkflate og balansert spacing */
     border: none;               /* HVA: Fjerner standardkant for renere uttrykk */
+}
+
+.side-container{
+  backround-color: var(--basic-grey);
+  padding: 1rem;
+
+  form{
+
+    input{
+      display: block;
+      padding: 1rem;
+      margin: 0.4rem 0;
+    }
+  }
+
+}
 }
